@@ -241,3 +241,10 @@ pt-BR:
         in_protest: Em protesto
         chargeback: Estornada
         in_analysis: Em análise
+      payment_method:
+        iugu_bank_slip_test: Boleto bancário de teste
+        iugu_bank_slip: Boleto bancário
+        iugu_credit_card_test: Cartão de crédito de teste
+        iugu_credit_card: Cartão de crédito
+        iugu_pix_test: Pix de teste
+        iugu_pix: Pix
