@@ -17,7 +17,7 @@ module JeraPayment
                 else
                   fetch_payment_method_id
                   @resource.update_columns(status: @data_update[:status], credit_card_api_id: @payment_method_id,
-                                           payment_method: @data_update[:payment_method].to_sym)
+                                           payment_method: @data_update[:payment_method], paid_at: @data_update[:paid_at])
                 end
               end
             rescue Exception => error

@@ -9,7 +9,7 @@ class JeraPayment::Invoice < ActiveRecord::Base
                 :ensure_workday_due_date, :items, :total_cents, :discount_cents,
                 :payable_with, :return_url, :expired_url, :notification_url, :fines,
                 :late_payment_fine, :per_day_interest, :ignore_due_email, :subscription_api_id,
-                :credits, :early_payment_discount, :early_payment_discounts, :payer, :paid_at, :secure_url, :digitable_line, :barcode_data, :barcode
+                :credits, :early_payment_discount, :early_payment_discounts, :payer, :secure_url, :digitable_line, :barcode_data, :barcode
 
   self.table_name = 'jera_payment_invoices'
 
