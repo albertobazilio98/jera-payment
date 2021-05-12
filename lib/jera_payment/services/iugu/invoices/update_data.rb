@@ -16,8 +16,9 @@ module JeraPayment
                   raise(StandardError, @data_update[:errors])
                 else
                   fetch_payment_method_id
+                  parse_payment_method
                   @resource.update_columns(status: @data_update[:status], credit_card_api_id: @payment_method_id,
-                                           payment_method: @data_update[:payment_method])
+                                           payment_method: @data_update[:payment_method].to_sym)
                 end
               end
             rescue Exception => error
@@ -30,6 +31,7 @@ module JeraPayment
             @payment_method_id = @data_update[:variables].find do |item|
               item[:variable] == 'customer_payment_method_id'
             end
+            
             @payment_method_id = @payment_method_id[:value] if @payment_method_id.present?
           end
         end

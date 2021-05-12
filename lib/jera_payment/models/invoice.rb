@@ -15,6 +15,8 @@ class JeraPayment::Invoice < ActiveRecord::Base
 
   enumerize :status, in: { pending: 0, paid: 1, canceled: 2, partially_paid: 3, refunded: 4, expired: 5,
                           authorized: 6, in_protest: 7, chargeback: 8, in_analysis: 9 }, predicates: true, scope: true, default: :pending
+  enumerize :payment_method, in: { iugu_bank_slip_test: 0, iugu_bank_slip: 1, iugu_credit_card_test: 2, iugu_credit_card: 3,
+                                   iugu_pix_test: 4, iugu_pix: 5 }, predicates: true, scope: true
 
   belongs_to :customer, class_name: 'JeraPayment::Customer', optional: true
 
