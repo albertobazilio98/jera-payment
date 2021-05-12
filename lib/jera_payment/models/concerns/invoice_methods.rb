@@ -24,6 +24,10 @@ module JeraPayment
           JeraPayment::Services::Iugu::Invoices::SendEmail.new(self).call
         end
 
+        def update_data
+          JeraPayment::Services::Iugu::Invoices::UpdateData.new(self).call
+        end
+
         def has_update_callback?
           false
         end

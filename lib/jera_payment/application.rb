@@ -39,6 +39,7 @@ require 'jera_payment/services/iugu/credit_cards/destroy'
 # IUGU INVOICES SERVICES
 require 'jera_payment/services/iugu/invoices/create'
 require 'jera_payment/services/iugu/invoices/update_status'
+require 'jera_payment/services/iugu/invoices/update_data'
 require 'jera_payment/services/iugu/invoices/duplicate'
 require 'jera_payment/services/iugu/invoices/send_email'
 

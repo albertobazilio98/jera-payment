@@ -34,6 +34,8 @@ class CreateJeraPaymentInvoices < ActiveRecord::Migration<%= migration_version %
       t.string     :digitable_line
       t.string     :barcode_data
       t.string     :barcode
+      t.string     :payment_method
+      t.string     :credit_card_api_id
       t.boolean    :duplicated, default: false
 
       t.timestamps null: false
